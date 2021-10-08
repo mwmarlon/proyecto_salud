@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Consultar resultado
+{% endblock title %}
+
+{% block content %}
+{% include 'includes/header.html' %}
+
+
+<div class="grid-container">
+    <div class="grid-x">
+        <h1>Iniciar sesion</h1>
+        <form class="cell grid-x grid-margin-x" method="POST">{% csrf_token %}
+            <div class="medium-6 cell">
+                <label>Usuario:
+                    {{ form.nomuser}}
+                </label>
+            </div>
+            <div class="medium-6 cell">
+            </div>
+            <div class="medium-6 cell">
+                <label>Contraseña:
+                    {{ form.contraseña}}
+                </label>
+            </div>
+            <div class="medium-6 cell">
+            </div>
+            <div class="medium-6 cell">
+            </div>
+            <div class="medium-6 cell">
+            </div>
+            <div class="medium-6 cell">
+                <button type="submit" class=" button success"><b>Acceder</b></button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<footer align="right">
+    {{ fecha }}
+</footer>
+
+{% endblock content %}
+

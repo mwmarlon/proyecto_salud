@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Agendar cita
+{% endblock title %}
+
+{% block content %}
+{% include 'includes/header.html' %}
+
+<div class="grid-container">
+    <div class="grid-x">
+        <h2>Agende su cita</h2>
+        <form class="cell grid-x grid-margin-x" method="POST" enctype="multipart/form-data">{% csrf_token %}
+            <div class="medium-6 cell">
+                <label>Usuario:
+                    {{ form.usuario}}
+                </label>
+            </div>
+            <div class="medium-6 cell">
+                <label>Codigo cita:
+                    {{ form.codigo}}
+                </label>
+            </div>
+            <div class="medium-6 cell">
+                <label>sede:
+                    {{ form.sede}}
+                </label>
+            </div>
+            <div class="medium-6 cell">
+                <label>Consultorio:
+                    {{ form.consultorio}}
+                </label>
+            </div>
+            <div class="medium-6 cell">
+                <label>Historia clinica:
+                    {{ form.Historia}}
+                </label>
+            </div>
+            <div class="medium-6 cell">   
+            </div>
+            <div class="medium-6 cell">
+                <button type="submit" class=" button success"><b>Agendar cita</b></button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<footer align="right">
+            {{ fecha }}
+</footer>
+
+ 
+{% endblock content %}
+        

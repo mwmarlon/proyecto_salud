@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Formulario PQRS{% endblock title %} 
+
+{% block content %}
+{% include 'includes/header.html' %}
+
+<div class="grid-container">
+    <div class="grid-x">
+        <h2>Radique su PQRS</h2>
+        <form class="cell grid-x grid-margin-x" method="POST" enctype="multipart/form-data">{% csrf_token %}
+            <div class="medium-6 cell">
+                <label>Tipo de documento:
+                    {{ form.type_document}}
+                </label>
+            </div>
+            <div class="medium-6 cell">
+                <label>Número de documento:
+                    {{ form.identificacion}}
+                </label>
+            </div>
+            <div class="medium-6 cell">
+                <label>Nombres:
+                    {{ form.first_name}}
+                </label>
+            </div>
+            <div class="medium-6 cell">
+                <label>Apellidos:
+                    {{ form.last_name}}
+                </label>
+            </div>
+            <div class="medium-6 cell">
+                <label>Ubicación del hecho:
+                    {{ form.locate_hppnd}}
+                </label>
+            </div>
+            <div class="medium-6 cell">
+                <label>Ciudad:
+                    {{ form.city_name}}
+                </label>
+            </div>
+            <div class="medium-6 cell">
+                <label>Descripción de los hechos:
+                    {{ form.dscrp_happ}}
+                </label>
+            </div>
+            <div class="medium-6 cell"></div>
+            <div class="medium-6 cell">
+                <button type="submit" class=" button success"><b>Aceptar</b></button>
+            </div>
+        </form>
+    </div>
+</div>
+ 
+<footer align="right">
+    {{ fecha }}
+</footer>
+
+
+ 
+{% endblock content %}

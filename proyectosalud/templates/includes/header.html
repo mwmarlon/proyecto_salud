@@ -1,0 +1,18 @@
+<div class="top-bar">
+    <div class="top-bar-left">
+      <ul class="dropdown menu" data-dropdown-menu>
+        <li><a href="/"><font color="black"><b>EPS Senasoft</b></font></a></li>
+        <li><a href="{% url 'agendar_app:agenda' %}">Agendar citas</a> </li>
+        <li><a href="{% url 'consultar_app:consulta2' %}">Resultados</a></li>
+        <li><a href="{% url 'pqrs_app:formPQRS' %}">PQRS</a></li>
+      </ul>
+    </div>
+    <div class="top-bar-right">
+      <ul class="menu">
+        <li><button type="button" class="button">Buscar</button></li>
+        <li><input type="search" placeholder="Buscar"></li>
+        <li><a href="{% url 'user_app:user-logout' %}"><font color="black"><b>Salir</b></font></a></li>
+      </ul>
+    </div>
+  </div>
+  <h4 align="right">Bienvenido: {{ user.nombres }} {{ user.apellidos }}</h4>
