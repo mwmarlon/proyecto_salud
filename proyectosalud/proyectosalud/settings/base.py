@@ -31,6 +31,7 @@ LOCAL_APPS = (
     'applications.pqrs',
     'applications.agendar',
     'applications.users',
+    'applications.home',
 )
 
 THIRD_PARTY_APPS = ()
